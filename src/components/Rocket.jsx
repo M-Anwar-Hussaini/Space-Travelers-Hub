@@ -1,14 +1,13 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { reserve } from '../redux/rockets/rocketSlice';
+import { reserve, cancelReservation } from '../redux/rockets/rocketSlice';
 
 export default function Rocket({
   image, description, name, id, isReserved,
 }) {
-  const reservedBadge = <span className="badge text-bg-info">Reserved</span>;
-
+  const className = isReserved ? 'bg-success-subtle' : '';
   return (
-    <figure className="container mb-2 border rounded p-3">
+    <figure className={`container mb-2 border rounded p-3 ${className}`}>
       <div className="row">
 
         <div className="col-3">
@@ -17,15 +16,10 @@ export default function Rocket({
 
         <div className="col-9">
           <h3>{name}</h3>
-
-          <p>
-            {isReserved && reservedBadge}
-            &nbsp;
-            {description}
-          </p>
-
-          {isReserved || <ReserveBtn id={id} />}
+          <p>{description}</p>
+          {isReserved ? <CancelBtn id={id} /> : <ReserveBtn id={id} /> }
         </div>
+
       </div>
     </figure>
   );
@@ -43,11 +37,28 @@ function ReserveBtn({ id }) {
   const dispatch = useDispatch();
   return (
     <button type="button" className="btn btn-success" onClick={() => dispatch(reserve(id))}>
-      Reserve
+      Reserve Rocket
     </button>
   );
 }
 
 ReserveBtn.propTypes = {
+  id: PropTypes.string.isRequired,
+};
+
+function CancelBtn({ id }) {
+  const dispatch = useDispatch();
+  return (
+    <button
+      type="button"
+      className="btn btn-outline-secondary"
+      onClick={() => dispatch(cancelReservation(id))}
+    >
+      Cancel Reservation
+    </button>
+  );
+}
+
+CancelBtn.propTypes = {
   id: PropTypes.string.isRequired,
 };
