@@ -3,3 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+main {
+  margin-top: 120px;
+}
+
+#logo {
+  height: 48px;
+  filter: invert(100%);
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
