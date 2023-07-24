@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -10,19 +10,19 @@ export default function Header() {
         </div>
         <ul className="list-group list-group-horizontal">
           <li className="list-group-item">
-            {/* <Link to="/" className="text-success active"> */}
-            Rockets
-            {/* </Link> */}
+            <Link to="/" className="text-success active">
+              Rockets
+            </Link>
           </li>
           <li className="list-group-item">
-            {/* <Link to="/missions" className="text-success"> */}
-            Missions
-            {/* </Link> */}
+            <Link to="/missions" className="text-success">
+              Missions
+            </Link>
           </li>
           <li className="list-group-item">
-            {/* <Link to="/profile" className="text-success"> */}
-            My profile
-            {/* </Link> */}
+            <Link to="/profile" className="text-success">
+              My profile
+            </Link>
           </li>
         </ul>
       </nav>
