@@ -20,6 +20,8 @@ export default function RocketContainer() {
             description={rocket.description}
             name={rocket.name}
             key={rocket.id}
+            id={rocket.id}
+            isReserved={rocket.isReserved}
           />
         ))}
       </div>
