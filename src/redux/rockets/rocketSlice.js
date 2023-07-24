@@ -38,6 +38,7 @@ const rocketSlice = createSlice({
               image: rocket.flickr_images[0],
               type: rocket.rocket_type,
               isReserved: false,
+              description: rocket.description,
             };
             return myRocket;
           });
