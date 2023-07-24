@@ -9,7 +9,21 @@ export default function Header() {
           <h2>Space Travelers Hub</h2>
         </div>
         <ul className="list-group list-group-horizontal">
-          Menu Items
+          <li className="list-group-item">
+            {/* <Link to="/" className="text-success active"> */}
+            Rockets
+            {/* </Link> */}
+          </li>
+          <li className="list-group-item">
+            {/* <Link to="/missions" className="text-success"> */}
+            Missions
+            {/* </Link> */}
+          </li>
+          <li className="list-group-item">
+            {/* <Link to="/profile" className="text-success"> */}
+            My profile
+            {/* </Link> */}
+          </li>
         </ul>
       </nav>
     </header>
