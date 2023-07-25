@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Mission from './Mission';
+import { getMissionsFromApi } from '../redux/missions/missionSlice';
 
 export default function MissionContainer() {
+  const { missions, isLoading } = useSelector((store) => store.missions);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getMissionsFromApi());
+  }, [dispatch]);
+
+  if (isLoading) {
+    return <div className="alert alert-info">Please wait...</div>;
+  }
   return (
     <div>
       <h1>Missions</h1>
