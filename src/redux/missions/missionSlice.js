@@ -1,21 +1,19 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-export const getMissionsFromApi = createAsyncThunk(
-  'missions/getMissionsFromApi',
-  async () => {
-    try {
-      const response = await fetch('https://api.spacexdata.com/v3/missions');
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      return error;
-    }
-  },
-);
+export const getMissionsFromApi = createAsyncThunk('missions/getMissionsFromApi', async () => {
+  try {
+    const response = await fetch('https://api.spacexdata.com/v3/missions');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    return error;
+  }
+});
 
 const initialState = {
   missions: [],
   isLoading: false,
+  hasError: false,
 };
 
 const missionSlice = createSlice({
@@ -23,21 +21,18 @@ const missionSlice = createSlice({
   initialState,
   reducers: {
     join: (state, action) => {
-      const mission = state.missions.find(
-        (mission) => mission.id === action.payload,
-      );
+      const mission = state.missions.find((mission) => mission.id === action.payload);
       mission.status = true;
     },
     leave: (state, action) => {
-      const mission = state.missions.find(
-        (mission) => mission.id === action.payload,
-      );
+      const mission = state.missions.find((mission) => mission.id === action.payload);
       mission.status = false;
     },
   },
   extraReducers: (builder) => {
     builder
       .addCase(getMissionsFromApi.fulfilled, (state, action) => {
+        state.hasError = false;
         if (state.missions.length === 0) {
           state.missions = action.payload.map((mission) => {
             const newMission = {
@@ -54,6 +49,12 @@ const missionSlice = createSlice({
 
       .addCase(getMissionsFromApi.pending, (state) => {
         state.isLoading = true;
+        state.hasError = false;
+      })
+
+      .addCase(getMissionsFromApi.rejected, (state) => {
+        state.isLoading = false;
+        state.hasError = true;
       });
   },
 });

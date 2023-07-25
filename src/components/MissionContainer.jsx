@@ -2,9 +2,10 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Mission from './Mission';
 import { getMissionsFromApi } from '../redux/missions/missionSlice';
+import Message from './Message';
 
 export default function MissionContainer() {
-  const { missions, isLoading } = useSelector((store) => store.missions);
+  const { missions, isLoading, hasError } = useSelector((store) => store.missions);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -12,7 +13,11 @@ export default function MissionContainer() {
   }, [dispatch]);
 
   if (isLoading) {
-    return <div className="alert alert-info">Please wait...</div>;
+    return <Message type="warning">Please wait...</Message>;
+  }
+
+  if (hasError) {
+    return <Message type="danger">Something went wrong.</Message>;
   }
   return (
     <div>

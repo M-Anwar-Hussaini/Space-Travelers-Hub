@@ -2,13 +2,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Rocket from './Rocket';
 import { getData } from '../redux/rockets/rocketSlice';
+import Message from './Message';
 
 export default function RocketContainer() {
-  const { rockets } = useSelector((store) => store.rockets);
+  const { rockets, isLoading, hasError } = useSelector((store) => store.rockets);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getData());
   }, [dispatch]);
+
+  if (isLoading) {
+    return <Message type="warning">Please wait...</Message>;
+  }
+
+  if (hasError) {
+    return <Message type="danger">Something went wrong.</Message>;
+  }
 
   return (
     <section>

@@ -37,7 +37,7 @@ const rocketSlice = createSlice({
       })
 
       .addCase(getData.fulfilled, (state, action) => {
-        state.isLoading = true;
+        state.isLoading = false;
         state.hasError = false;
         if (state.rockets.length === 0) {
           state.rockets = action.payload.map((rocket) => {

@@ -1,3 +1,4 @@
+import Footer from './components/Footer';
 import Header from './components/Header';
 import LocalRoutes from './components/LocalRoutes';
 
@@ -6,6 +7,7 @@ function App() {
     <>
       <Header />
       <LocalRoutes />
+      <Footer />
     </>
   );
 }
