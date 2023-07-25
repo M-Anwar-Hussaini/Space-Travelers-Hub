@@ -1,11 +1,17 @@
-export default function MissionContainer() {
+import React from 'react';
+import PropTypes from 'prop-types';
+
+export default function Mission({ name, description, status }) {
   return (
-    <tr className="table-body">
-      <td>name</td>
-      <td>description</td>
+    <tr className={status ? 'table-success' : 'table-body'}>
+      <td>{name}</td>
+      <td>{description}</td>
       <td>
-        <span className="badge text-bg-primary">Active member</span>
-        <span className="badge text-bg-secondary">Not a member</span>
+        {status ? (
+          <span className="badge text-bg-primary">Active member</span>
+        ) : (
+          <span className="badge text-bg-secondary">Not a member</span>
+        )}
       </td>
       <td className="text-center col-2">
         <button
@@ -24,3 +30,9 @@ export default function MissionContainer() {
     </tr>
   );
 }
+
+Mission.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  status: PropTypes.bool.isRequired,
+};
