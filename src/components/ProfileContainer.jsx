@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import ProfileMissions from './ProfileMissions';
 
 export default function ProfileContainer() {
   const { rockets } = useSelector((store) => store.rockets);
@@ -13,8 +14,9 @@ export default function ProfileContainer() {
           </ul>
         </div>
         <div className="col">
-          <div className="card">
-            ProfileMissions
+          <h3>My Missions</h3>
+          <div>
+            <ProfileMissions />
           </div>
         </div>
       </div>
