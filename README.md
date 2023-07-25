@@ -186,6 +186,13 @@ npm test
 - 👤 Twitter: [@MAnwarHussaini](https://twitter.com/MAnwarHussaini)
 - 👤 LinkedIn: [Mohammad Anwar Hussaini](https://www.linkedin.com/in/mohammad-anwar-hussaini-876638267/)
 
+
+👤 **Abdelaziz Ali**
+
+- 👤 GitHub: [@Abdelaziz-Ali](https://github.com/Abdelaziz-Ali)
+- 👤 Twitter: [@AbdelazizDV](https://twitter.com/AbdelazizDV)
+- 👤 LinkedIn: [in/abdelaziz-mahdi](https://www.linkedin.com/in/abdelaziz-mahdi)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
