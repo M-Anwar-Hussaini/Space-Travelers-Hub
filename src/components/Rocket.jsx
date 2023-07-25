@@ -8,7 +8,7 @@ export default function Rocket({
   const className = isReserved ? 'bg-success-subtle' : '';
   return (
     <figure className={`container mb-2 border rounded p-3 ${className}`}>
-      <div className="row">
+      <div className="row align-items-center">
 
         <div className="col-3">
           <img src={image} alt={name} className="img-thumbnail" />
@@ -16,7 +16,10 @@ export default function Rocket({
 
         <div className="col-9">
           <h3>{name}</h3>
-          <p>{description}</p>
+          <p>
+            {isReserved && <Badge />}
+            {description}
+          </p>
           {isReserved ? <CancelBtn id={id} /> : <ReserveBtn id={id} /> }
         </div>
 
