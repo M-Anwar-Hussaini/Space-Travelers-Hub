@@ -94,9 +94,9 @@
 
 <!-- LIVE DEMO -->
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
 
-- ✅ Click [here](https://book-store-pepn.onrender.com/) to see the live demo. -->
+- ✅ Click [here](https://space-travelers-hub-fn9i.onrender.com/) to see the live demo.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -192,10 +192,10 @@ npm test
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Jest testing]**
-- [ ] **[React Library Testing]**
+- [x] **[Jest testing]**
+- [x] **[React Library Testing]**
+- [x] **[Deployment]**
 - [ ] **[Responsive]**
-- [ ] **[Deployment]**
 - [ ] **[Use developer local storage]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
