@@ -62,3 +62,12 @@ function CancelBtn({ id }) {
 CancelBtn.propTypes = {
   id: PropTypes.string.isRequired,
 };
+
+function Badge() {
+  return (
+    <>
+      <span className="badge text-bg-info">Reserved</span>
+      &nbsp;
+    </>
+  );
+}
