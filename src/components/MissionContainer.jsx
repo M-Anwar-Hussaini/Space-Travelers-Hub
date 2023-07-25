@@ -1,4 +1,19 @@
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import Mission from './Mission';
+import { getMissionsFromApi } from '../redux/missions/missionSlice';
+
 export default function MissionContainer() {
+  const { missions, isLoading } = useSelector((store) => store.missions);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getMissionsFromApi());
+  }, [dispatch]);
+
+  if (isLoading) {
+    return <div className="alert alert-info">Please wait...</div>;
+  }
   return (
     <div>
       <h1>Missions</h1>
@@ -12,28 +27,15 @@ export default function MissionContainer() {
           </tr>
         </thead>
         <tbody>
-          <tr className="table-body">
-            <td>name</td>
-            <td>description</td>
-            <td>
-              <span className="badge text-bg-primary">Active member</span>
-              <span className="badge text-bg-secondary">Not a member</span>
-            </td>
-            <td className="text-center col-2">
-              <button
-                type="button"
-                className="btn btn-outline-danger"
-              >
-                Leave Mission
-              </button>
-              <button
-                type="button"
-                className="btn btn-outline-secondary"
-              >
-                Join Mission
-              </button>
-            </td>
-          </tr>
+          {missions.map((mission) => (
+            <Mission
+              key={mission.id}
+              description={mission.description}
+              id={mission.id}
+              name={mission.name}
+              status={mission.status}
+            />
+          ))}
         </tbody>
       </table>
     </div>
