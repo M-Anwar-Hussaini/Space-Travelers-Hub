@@ -27,7 +27,15 @@ export default function MissionContainer() {
           </tr>
         </thead>
         <tbody>
-          <Mission />
+          {missions.map((mission) => (
+            <Mission
+              key={mission.id}
+              description={mission.description}
+              id={mission.id}
+              name={mission.name}
+              status={mission.status}
+            />
+          ))}
         </tbody>
       </table>
     </div>
