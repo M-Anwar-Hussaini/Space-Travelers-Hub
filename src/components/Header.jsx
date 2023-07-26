@@ -1,8 +1,6 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
-  const [currentPage, setCurrentPage] = useState(1);
   return (
     <header className="container p-3 border-bottom shadow fixed-top text-bg-success mt-2 rounded">
       <nav className="d-flex align-items-center justify-content-between">
@@ -11,35 +9,26 @@ export default function Header() {
           <h2>Space Travelers Hub</h2>
         </div>
         <div className="btn-group">
-          <Link
+          <NavLink
             to="/"
-            className={`btn btn-outline-light ${
-              currentPage === 1 && 'active'
-            }`}
-            onClick={() => setCurrentPage(1)}
+            className="btn btn-outline-light"
           >
             Rockets
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/missions"
-            className={`btn btn-outline-light ${
-              currentPage === 2 && 'active'
-            }`}
-            onClick={() => setCurrentPage(2)}
+            className="btn btn-outline-light"
           >
             Missions
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/profile"
-            className={`btn btn-outline-light ${
-              currentPage === 3 && 'active'
-            }`}
-            onClick={() => setCurrentPage(3)}
+            className="btn btn-outline-light"
           >
             My profile
-          </Link>
+          </NavLink>
         </div>
       </nav>
     </header>
