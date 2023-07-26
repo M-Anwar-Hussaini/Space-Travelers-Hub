@@ -8,7 +8,7 @@ export default function Mission({
 }) {
   const dispatch = useDispatch();
   return (
-    <tr className={status ? 'table-success' : 'table-body'}>
+    <tr className={status ? 'table-success' : 'table-body'} data-testid="row">
       <td>{name}</td>
       <td>{description}</td>
       <td>
