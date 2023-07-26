@@ -184,7 +184,7 @@ npm test
 
 - 👤 GitHub: [@Anwar Hussaini](https://github.com/M-Anwar-Hussaini)
 - 👤 Twitter: [@MAnwarHussaini](https://twitter.com/MAnwarHussaini)
-- 👤 LinkedIn: [Mohammad Anwar Hussaini](https://www.linkedin.com/in/mohammad-anwar-hussaini-876638267/)
+- 👤 LinkedIn: [Mohammad Anwar Hussaini](https://www.linkedin.com/in/anwar-hussaini/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
