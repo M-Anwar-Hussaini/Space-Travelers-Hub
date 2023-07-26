@@ -94,9 +94,9 @@
 
 <!-- LIVE DEMO -->
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
 
-- ✅ Click [here](https://book-store-pepn.onrender.com/) to see the live demo. -->
+- ✅ Click [here](https://space-travelers-hub-fn9i.onrender.com/) to see the live demo.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -184,7 +184,14 @@ npm test
 
 - 👤 GitHub: [@Anwar Hussaini](https://github.com/M-Anwar-Hussaini)
 - 👤 Twitter: [@MAnwarHussaini](https://twitter.com/MAnwarHussaini)
-- 👤 LinkedIn: [Mohammad Anwar Hussaini](https://www.linkedin.com/in/mohammad-anwar-hussaini-876638267/)
+- 👤 LinkedIn: [Mohammad Anwar Hussaini](https://www.linkedin.com/in/anwar-hussaini/)
+
+
+👤 **Abdelaziz Mahdi**
+
+- 👤 GitHub: [@Abdelaziz-Ali](https://github.com/Abdelaziz-Ali)
+- 👤 Twitter: [@AbdelazizDV](https://twitter.com/AbdelazizDV)
+- 👤 LinkedIn: [in/abdelaziz-mahdi](https://www.linkedin.com/in/abdelaziz-mahdi)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -192,10 +199,10 @@ npm test
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Jest testing]**
-- [ ] **[React Library Testing]**
+- [x] **[Jest testing]**
+- [x] **[React Library Testing]**
+- [x] **[Deployment]**
 - [ ] **[Responsive]**
-- [ ] **[Deployment]**
 - [ ] **[Use developer local storage]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

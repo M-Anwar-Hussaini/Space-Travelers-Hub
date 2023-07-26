@@ -1,6 +1,14 @@
+import Footer from './components/Footer';
+import Header from './components/Header';
+import LocalRoutes from './components/LocalRoutes';
+
 function App() {
   return (
-    <h1>Hello World</h1>
+    <>
+      <Header />
+      <LocalRoutes />
+      <Footer />
+    </>
   );
 }
 
